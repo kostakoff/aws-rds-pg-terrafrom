@@ -26,10 +26,3 @@ provider "postgresql" {
 
   superuser = false
 }
-
-data "postgresql_schemas" "postgres" {
-  database = "postgres"
-  depends_on = [ 
-    aws_db_instance.main
-  ]
-}
