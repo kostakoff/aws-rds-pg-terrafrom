@@ -10,5 +10,6 @@ resource "aws_security_group" "rds-default" {
   }
   tags = {
     "Name" = var.name
+    "managed-by" = "terraform"
   }
 }

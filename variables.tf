@@ -31,3 +31,5 @@ data "aws_subnet" "lab-b" {
 data "aws_db_instance" "main" {
   db_instance_identifier = aws_db_instance.main.identifier
 }
+
+data "aws_caller_identity" "current" {}

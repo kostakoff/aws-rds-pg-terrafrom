@@ -7,6 +7,7 @@ resource "aws_db_subnet_group" "main" {
 
   tags = {
     Name = var.name
+    "managed-by" = "terraform"
   }
 }
 
@@ -35,4 +36,8 @@ resource "aws_db_instance" "main" {
   depends_on = [ 
     aws_db_subnet_group.main 
   ]
+
+  tags = {
+    "managed-by" = "terraform"
+  }
 }
